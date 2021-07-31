@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="EC92358A-9219-8930-A9F5-C9E0CCA61C29" containerWithKeyObject="113F878C-8B6D-8874-6EAA-CA5DDA1FE352" localFKIndex="5273F583-27EE-C395-5F52-BCA4978E0C5F" name="PAYMENT_EXCH_RATE_FK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>94731F2D-69F5-F6C5-21B0-09E3069CABE7</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<referredTableLongName>EXCHANGE_CURRENCY_RATES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>CA225753-5DBB-D3A1-94CA-646272535D46</referredTableID>
+<keyObject>0EF432BA-4FA6-B93E-1C9B-900638B15A28</keyObject>
+<referredKeyID>0EF432BA-4FA6-B93E-1C9B-900638B15A28</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>EXCHRATEDATE,CURRENCYPAIR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

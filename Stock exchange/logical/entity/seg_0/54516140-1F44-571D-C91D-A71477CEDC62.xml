@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="54516140-1F44-571D-C91D-A71477CEDC62" name="SECURITY LIST">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-24 19:46:34 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="security_id" id="FCC7348F-6587-CC63-0A1F-6BAB2F087D9A">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-30 01:55:11 UTC</createdTime>
+<generatorID>23462018-13FF-A936-BE47-590D6037AE91</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<referedAttribute>FB3B3378-EEE8-86AA-3444-7FB672A0BB33</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="approvalDate" id="45EEE954-2ED6-B8DB-E8B4-0B1D1EDA0E38">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-30 01:59:16 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3538AD90-3311-F170-BC86-9644B7A30596" name="Security list PK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-25 00:13:34 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="false"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FCC7348F-6587-CC63-0A1F-6BAB2F087D9A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

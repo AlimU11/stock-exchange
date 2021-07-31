@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<InheritanceRelation class="oracle.dbtools.crest.model.design.logical.InheritanceRelation" name="Hierarchy_16" directorySegmentName="seg_0" id="3ABAD1DB-08AB-E2C2-1E21-144458DA80D4">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-25 22:29:24 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="3EB96D5A-1407-AB1D-8948-90E623F1F740" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>Super Type</nameOnSource>
+<nameOnTarget>Sub Type</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceEntity>C9582932-DE9B-E1F4-7EF0-57D4F10996DF</sourceEntity>
+<targetEntity>3ECBA94C-8567-2943-8535-CA598BCDD6C2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</InheritanceRelation>

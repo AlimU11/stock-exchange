@@ -1,0 +1,200 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0DA62C55-CB7B-E349-D14B-F5B819F7D50D" name="SECURITIES">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 20:10:19 UTC</createdTime>
+<generatorID>9C0EBBE1-E15A-8017-0CE2-64B0398DF0C6</generatorID>
+<notes><![CDATA[The table stores two type of Securities: Debt and Equity and references to their owners in Issuers table]]></notes>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<ordsAlias>security</ordsAlias>
+<endOfScript><![CDATA[CREATE SEQUENCE SECURITIES_SEQ;
+
+CREATE OR REPLACE TRIGGER SECURITIES_TRG  
+BEFORE INSERT ON SECURITIES 
+FOR EACH ROW 
+WHEN (new.SECURITY_ID IS NULL) 
+BEGIN 
+  SELECT SECURITIES_SEQ.NEXTVAL 
+  INTO   :new.SECURITY_ID 
+  FROM   dual; 
+END; 
+/]]></endOfScript>
+<shouldGeneratescript>true</shouldGeneratescript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SECURITY_ID" id="BE7D43E0-77DA-AD55-AB9C-88F386D71B11">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 20:10:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[Security ID]]></commentInRDBMS>
+<generatorID>FB3B3378-EEE8-86AA-3444-7FB672A0BB33</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="EAA24762-1B9F-3907-063A-41472F49595C">
+<createdBy>alimu</createdBy>
+<createdTime>2021-05-01 04:10:00 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>128 CHAR</dataTypeSize>
+<ownDataTypeParameters>128 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TYPE" id="88B01BAB-A9BC-AC25-9336-04C4310487BA">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 22:57:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Type of Security:
+D - DEBT
+E - EQUITY]]></commentInRDBMS>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ISSUER_ID" id="09BED64C-538F-7F94-105E-804EAFF12F06">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 20:10:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID of related Issuer]]></commentInRDBMS>
+<generatorID>C0D9BBBF-75E7-5E8D-BA31-FBAD562C27DA</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F56171DD-CFF4-7CBB-D11D-F1EFC27C189F" referredColumn="89E5769A-51A0-4352-015C-F3109FC3B823"/>
+</associations>
+</Column>
+<Column name="ISSUEDATE" id="3D62C975-7826-D77B-578D-15441FD8639A">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 20:10:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[The date on which a corporation issues security to the public ]]></commentInRDBMS>
+<generatorID>0916B504-9979-DA7F-5C00-5A5B17DF03E8</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ISSUEPRICE" id="24EA6926-7B6B-958B-81E7-714625B949C3">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 20:10:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[Issue price (or “public offering price”) is the price at which it is taken to market at the time of issue]]></commentInRDBMS>
+<generatorID>BDC3BA18-EA61-7214-EF78-7CF447D91DBE</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ISSUESIZE" id="D9DB82ED-25A6-9814-4D67-8BDFC14E93E3">
+<createdBy>alimu</createdBy>
+<createdTime>2021-05-01 04:27:55 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9 CHAR</dataTypeSize>
+<ownDataTypeParameters>9 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MATURITYDATE" id="C804D5C8-3E07-122B-CE23-6BE4726FA671">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 21:04:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[The period from the issue date until the final contractually scheduled payment (Debt)]]></commentInRDBMS>
+<generatorID>B033A66F-2C14-F6CD-EA33-9076EDB465F7</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COUPONRATE" id="851F2D33-1B77-967F-DCDE-921F7129BEC5">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 21:04:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[A coupon payment on a bond is the annual interest payment that the bondholder receives from the bond's issue date until it matures (Debt)]]></commentInRDBMS>
+<generatorID>3A840AF0-C72F-8A4E-9F96-22B49E6AA139</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COUPONTYPE" id="FC914666-A46A-D984-7433-20FDCFCF0CC4">
+<createdBy>alimu</createdBy>
+<createdTime>2021-05-01 04:20:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[FIX - fixed coupon
+FLOAT - floating coupon
+ZERO - zero coupon]]></commentInRDBMS>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EPS" id="138768F3-CA56-92E0-ADEC-FB1CCB6F0CB1">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 21:04:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Earnings per share (EQUITY)]]></commentInRDBMS>
+<generatorID>0281298A-A904-DDD6-8216-2B1DDB122E53</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="70B554E9-838D-A1B1-F958-71F58BD54811" name="SECURITY_PK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 21:05:40 UTC</createdTime>
+<generatorID>A4B5C064-68D7-7DFA-F4ED-A0E9A010F4AD</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BE7D43E0-77DA-AD55-AB9C-88F386D71B11"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CB6F6972-0E8A-D0B4-1D7F-8F05E1ADDB06" name="SECURITY_ISSUER_FK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 20:10:19 UTC</createdTime>
+<generatorID>61681236-5501-B6E0-2327-B500CBD105F6</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="09BED64C-538F-7F94-105E-804EAFF12F06"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

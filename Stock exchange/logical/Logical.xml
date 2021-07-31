@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="F42B2A3B-203C-14C1-75F0-B3B48997E5BE" mainViewID="4E7E87DE-A348-F4C4-82B2-9411FBADB176">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-10 17:04:37 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

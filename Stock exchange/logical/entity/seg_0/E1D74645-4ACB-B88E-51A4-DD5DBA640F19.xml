@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E1D74645-4ACB-B88E-51A4-DD5DBA640F19" name="BASE PRICE">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-24 19:47:33 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="priceDate" id="CEEF5B67-052A-F37C-642D-3843EE61008B">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-25 00:19:14 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="price" id="1B55D843-59A9-D150-F602-26535F7C9990">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-24 22:42:05 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="currency" id="79A0168F-41A4-D5C8-65E6-16A14DDB1F96">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-24 23:38:48 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="security_id" id="5F976C5F-2A85-E3D2-745A-5592DC36E214">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 21:40:45 UTC</createdTime>
+<generatorID>EA057513-D742-6ABB-C4B6-D415BFB37342</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<referedAttribute>FB3B3378-EEE8-86AA-3444-7FB672A0BB33</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0245356C-13C8-518E-ACFB-A79905F69F81" name="Price in domestic currency PK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-24 22:41:11 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="false"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CEEF5B67-052A-F37C-642D-3843EE61008B</attributeRef>
+<attributeRef>5F976C5F-2A85-E3D2-745A-5592DC36E214</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

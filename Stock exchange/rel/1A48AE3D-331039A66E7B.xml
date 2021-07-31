@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" mainViewID="D09E7F34-12A4-7530-6064-B4DFFFC8689E">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:10:59 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<shouldBeOpen>true</shouldBeOpen>
+<selectedRDBMSSite>3FD120B5-9F4E-6278-D5E2-746D192C8319</selectedRDBMSSite>
+</relationalModel>

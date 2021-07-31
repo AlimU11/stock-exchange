@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="075FF507-8D2E-86DF-D629-AA420BA26BB2" name="DEBT SECURITY">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-24 19:46:11 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="false"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>9C0EBBE1-E15A-8017-0CE2-64B0398DF0C6</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="couponRate" id="3A840AF0-C72F-8A4E-9F96-22B49E6AA139">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-25 00:37:50 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="couponType" id="C1CFEB0E-5719-168A-16CE-CB226D9CFC0E">
+<createdBy>alimu</createdBy>
+<createdTime>2021-05-01 04:20:04 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="maturityDate" id="B033A66F-2C14-F6CD-EA33-9076EDB465F7">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-25 00:36:28 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

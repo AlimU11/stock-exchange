@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CA225753-5DBB-D3A1-94CA-646272535D46" name="EXCHANGE_CURRENCY_RATES">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>20DE47C1-6B4E-3BF2-25A2-3E2FB11176A3</generatorID>
+<notes><![CDATA[The table stores exchange currency rate including history]]></notes>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<ordsAlias>exchange_currency_rate</ordsAlias>
+<abbreviation>EXCH_RATE</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EXCHRATEDATE" id="063513EF-4D37-6AF7-33E9-071B8779D94E">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Exchange currency rate date related to exact curreny pair]]></commentInRDBMS>
+<generatorID>7098C981-5C3B-9925-F283-DE13021E424B</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CURRENCYPAIR" id="4340C463-3807-D530-96F4-8A8C8404AB36">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Currency pair]]></commentInRDBMS>
+<generatorID>396F331C-21CD-8FA9-ACB2-85089450B4AB</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 CHAR</dataTypeSize>
+<ownDataTypeParameters>6 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RATE" id="C77E58CB-8396-959B-7FE3-7DCB17912C99">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Exact rate between currencies]]></commentInRDBMS>
+<generatorID>DD394E9F-87EA-55DB-658C-F24453F53E7F</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0EF432BA-4FA6-B93E-1C9B-900638B15A28" name="EXCH_RATE_PK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>64AB14E5-C008-9D37-6E34-570D3FC6918B</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="063513EF-4D37-6AF7-33E9-071B8779D94E"/>
+<colUsage columnID="4340C463-3807-D530-96F4-8A8C8404AB36"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

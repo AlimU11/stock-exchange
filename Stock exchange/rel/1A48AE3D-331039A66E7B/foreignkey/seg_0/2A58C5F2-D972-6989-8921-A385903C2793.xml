@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2A58C5F2-D972-6989-8921-A385903C2793" containerWithKeyObject="421D4779-7957-9526-CED4-5C9230564FDE" localFKIndex="0BE67D5D-61DA-1109-5CC3-03489F786696" name="EXCH_BROKER_SELLER_FK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>0BF76E04-A3A9-306C-0466-E97FF14850EF</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<referredTableLongName>BROKERS</referredTableLongName>
+<arc>527A0551-7452-3833-6157-E8692A1C7B43</arc>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>019C8329-13E7-FA5A-16B0-A41DDE400EF7</referredTableID>
+<keyObject>89765D43-94EC-D999-4659-0AB81C5103DA</keyObject>
+<referredKeyID>89765D43-94EC-D999-4659-0AB81C5103DA</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>BROKER_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

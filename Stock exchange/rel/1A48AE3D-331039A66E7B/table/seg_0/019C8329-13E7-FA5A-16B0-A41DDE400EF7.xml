@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="019C8329-13E7-FA5A-16B0-A41DDE400EF7" name="BROKERS">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>D3C0C05C-F95B-650E-1D77-3D248EC714A0</generatorID>
+<notes><![CDATA[The table stores brokers]]></notes>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<ordsAlias>broker</ordsAlias>
+<endOfScript><![CDATA[CREATE SEQUENCE BROKERS_SEQ;
+
+CREATE OR REPLACE TRIGGER BROKERS_TRG  
+BEFORE INSERT ON BROKERS 
+FOR EACH ROW 
+WHEN (new.BROKER_ID IS NULL) 
+BEGIN 
+  SELECT BROKERS_SEQ.NEXTVAL 
+  INTO   :new.BROKER_ID 
+  FROM   dual; 
+END; 
+/]]></endOfScript>
+<shouldGeneratescript>true</shouldGeneratescript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="BROKER_ID" id="F3371397-5493-F55E-C6BD-5A39AA5C0A9F">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>C24814FC-A0DD-F43D-A831-D7D803E1D664</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="5D176D2F-EF31-50C9-FF39-DED10FCBC14B">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>E4DD131D-92D9-0EFE-D41D-502317073F75</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="89765D43-94EC-D999-4659-0AB81C5103DA" name="BROKER_PK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>9F5C6301-8B66-D828-791A-340CE54F28F1</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F3371397-5493-F55E-C6BD-5A39AA5C0A9F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

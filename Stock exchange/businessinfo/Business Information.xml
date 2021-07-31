@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="3DFC92FD-22A5-5020-4300-AFCBEA6BC5EB">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-10 17:04:38 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

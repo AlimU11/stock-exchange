@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Arc class="oracle.dbtools.crest.model.design.logical.Arc" directorySegmentName="seg_0" id="BA0CE9C6-04E6-E2A8-3727-9E0645741D0F" name="Seller">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-26 22:38:21 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="3EB96D5A-1407-AB1D-8948-90E623F1F740" value="true"/>
+</engineerTo>
+<entity>20A5CF36-16F6-7312-B9E8-1AEDF490CA93</entity>
+<relations>
+<relationID>0BF76E04-A3A9-306C-0466-E97FF14850EF</relationID>
+<relationID>3CFA1374-1FCA-7A98-ED5E-2B7BD90224AA</relationID>
+<relationID>5DCEE42E-1C40-2E6D-0C6E-DA3F1FD1E0F2</relationID>
+</relations>
+</Arc>

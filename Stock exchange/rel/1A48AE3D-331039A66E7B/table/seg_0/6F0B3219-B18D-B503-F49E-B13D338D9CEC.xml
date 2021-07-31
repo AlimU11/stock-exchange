@@ -1,0 +1,172 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6F0B3219-B18D-B503-F49E-B13D338D9CEC" name="CLIENTS">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>662410C1-7348-B063-0E62-62DDF0811152</generatorID>
+<notes><![CDATA[The table stores brokers' clients
+]]></notes>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<ordsAlias>client</ordsAlias>
+<endOfScript><![CDATA[CREATE SEQUENCE CLIENTS_SEQ;
+
+CREATE OR REPLACE TRIGGER CLIENTS_TRG  
+BEFORE INSERT ON CLIENTS 
+FOR EACH ROW 
+WHEN (new.SHAREHOLDER_ID IS NULL) 
+BEGIN 
+  SELECT CLIENTS_SEQ.NEXTVAL 
+  INTO   :new.SHAREHOLDER_ID 
+  FROM   dual; 
+END; 
+/]]></endOfScript>
+<shouldGeneratescript>true</shouldGeneratescript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SHAREHOLDER_ID" id="7121D0C1-28EA-D358-16BD-A29CAD16C365">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 01:10:07 UTC</createdTime>
+<generatorID>24F99093-E4FC-D8ED-DE91-43AE7BF9088B</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BROKER_ID" id="C2A87E13-B6ED-2E7D-1818-167637DB1E15">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>104B364D-9982-B802-BDF8-0B171B546A69</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A1FD22C3-8CDF-C0AC-39BA-23064E242399" referredColumn="F3371397-5493-F55E-C6BD-5A39AA5C0A9F"/>
+</associations>
+</Column>
+<Column name="NAME" id="D9191A34-96E5-B85F-D51F-31AEEC55BDE0">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 01:10:07 UTC</createdTime>
+<generatorID>279AAF61-1E64-1D2D-B476-57A3431E30D3</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SURNAME" id="9645D8CC-43C2-1DA3-C751-B9F7599E5D78">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 01:10:07 UTC</createdTime>
+<generatorID>12AD0171-38E5-E2D7-3A0E-25A25CF832BE</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BIRTHDATE" id="BE1B7BCC-7EBD-319C-2641-AFA793F70DAD">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 01:10:07 UTC</createdTime>
+<generatorID>B6AF1802-183C-B2BC-5F4C-7586E7DD5E9B</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REGISTRATIONDATE" id="20B15BE4-AF70-6343-4BF5-C775C768EE40">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 01:10:07 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date of registration with the broker]]></commentInRDBMS>
+<generatorID>6A8B08DF-1448-6046-EB53-CBC6FEB8E551</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PHONENUMBER" id="6B5CCBF4-7AAC-0B9B-560A-F213C69E7F36">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 01:10:07 UTC</createdTime>
+<generatorID>CFE5CB4F-BF7A-4492-2C78-EEC42EB8FC37</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="02759755-D599-39A4-40E9-03944D50884E">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 01:10:07 UTC</createdTime>
+<generatorID>331F9713-A902-45B5-3C5F-BE51DAE5F9F9</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="418C14F0-037D-AE79-B5D7-F4ABC535DC26" name="CLIENT_PK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>224DB6C6-546C-5800-B6F1-B70AF07CDA0C</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7121D0C1-28EA-D358-16BD-A29CAD16C365"/>
+<colUsage columnID="C2A87E13-B6ED-2E7D-1818-167637DB1E15"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D59BEFE6-DC68-712B-44E9-C905CCAF3E32" name="CLIENT_PHONENUMBER_UK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-30 23:42:14 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B5CCBF4-7AAC-0B9B-560A-F213C69E7F36"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="24D17172-79DF-22CC-2F7A-D3531B2A3EFB" name="CLIENT_EMAIL_UK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-30 23:43:14 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02759755-D599-39A4-40E9-03944D50884E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D0124647-D29A-20B5-DCAD-D660824D745D" name="CLIENT_BROKER_FK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>1ABCC2F0-CD26-60A2-E956-080769847553</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C2A87E13-B6ED-2E7D-1818-167637DB1E15"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

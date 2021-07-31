@@ -1,0 +1,244 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="421D4779-7957-9526-CED4-5C9230564FDE" name="EXCHANGES">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>20A5CF36-16F6-7312-B9E8-1AEDF490CA93</generatorID>
+<notes><![CDATA[The table stores Exchanges together with references to seller, buyer and security]]></notes>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<ordsAlias>exchange</ordsAlias>
+<endOfScript><![CDATA[CREATE SEQUENCE EXCHANGES_SEQ;
+
+CREATE OR REPLACE TRIGGER EXCHANGES_TRG  
+BEFORE INSERT ON EXCHANGES 
+FOR EACH ROW 
+WHEN (new.EXCHANGE_ID IS NULL) 
+BEGIN 
+  SELECT EXCHANGES_SEQ.NEXTVAL 
+  INTO   :new.EXCHANGE_ID
+  FROM   dual; 
+END; 
+/
+
+CREATE OR REPLACE TRIGGER BUYER_SELLER_TRADER BEFORE
+    INSERT ON exchanges
+    FOR EACH ROW
+    WHEN (new.trader_id_seller IS NOT NULL 
+            AND new.trader_id_buyer IS NOT NULL)
+BEGIN
+    IF :new.trader_id_seller = :new.trader_id_buyer
+    THEN
+        RAISE_APPLICATION_ERROR(-20000, 'Integrity constraint SELLER trader and BUYER could not be the same');
+    END IF;
+END;
+/]]></endOfScript>
+<shouldGeneratescript>true</shouldGeneratescript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EXCHANGE_ID" id="EA6AFA85-A445-AF75-4BC9-E23DBD0B9E44">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>FAD819E5-F832-E9FF-C978-A74FF52DAE58</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXCHANGEDATE" id="0370A0D5-881D-A537-7A4C-A6469CC95752">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>0CEA39B7-F620-382B-3A34-AA0374603AF4</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AMOUNT" id="35A9C80F-A802-E09C-79A1-0F8B8E722023">
+<createdBy>alimu</createdBy>
+<createdTime>2021-05-02 03:58:31 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SECURITY_ID" id="19A8869E-5378-7C42-FA42-8418BC00B8CD">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-30 01:48:55 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F86D2FD9-BA8B-3F08-9082-2E3C2CA0EDD8" referredColumn="7D7EA35E-9299-A5CE-D3E8-2C9E276066C5"/>
+</associations>
+</Column>
+<Column name="BROKER_ID_BUYER" id="66BB8044-1FC1-C45C-A8EC-52DC7A3F28DF">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>A78CF538-44A8-46D0-566C-48DFB45E6F84</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="61674CBE-6D8E-96E5-6940-06F44E03E8FC" referredColumn="F3371397-5493-F55E-C6BD-5A39AA5C0A9F"/>
+</associations>
+</Column>
+<Column name="BROKER_ID_SELLER" id="B1EE3D47-F98E-B84D-3583-8DF383C44F22">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>F87A15F4-7F3A-5EC7-5752-AABB05D58916</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2A58C5F2-D972-6989-8921-A385903C2793" referredColumn="F3371397-5493-F55E-C6BD-5A39AA5C0A9F"/>
+</associations>
+</Column>
+<Column name="ISSUER_ID_SELLER" id="4C0295BE-314D-2480-6D43-0ACC82E70E2B">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>6591F990-DB9E-D5B8-D64E-A09F23374291</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A0AB680D-4ACF-6F34-FA2A-97747EC99DD4" referredColumn="89E5769A-51A0-4352-015C-F3109FC3B823"/>
+</associations>
+</Column>
+<Column name="TRADER_ID_SELLER" id="472D04F6-9A6D-FB3A-E688-AE7D57BAAA89">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 20:42:52 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8342A5C7-F505-DF16-4CF8-653F19F3AE24" referredColumn="44973DCC-BEA9-E80A-D537-9545FF079D81"/>
+</associations>
+</Column>
+<Column name="TRADER_ID_BUYER" id="7F41C379-78A5-1F5B-4BFB-37EFF231F0AE">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 20:42:52 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ACF488A7-B6DF-AF61-4B48-4D83535D1191" referredColumn="44973DCC-BEA9-E80A-D537-9545FF079D81"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5DE4DE68-CA8D-20C9-4F1F-FAA796E26719" name="EXCHANGE_PK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>27CCBD62-08E4-E3F7-E659-09B3CAC4CAB4</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA6AFA85-A445-AF75-4BC9-E23DBD0B9E44"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9E70DF0F-6404-85BA-5507-ED60777EB173" name="EXCH_BROKER_BUYER_FK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>0E56CBF0-56BA-133D-8129-8DC76A254BB2</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66BB8044-1FC1-C45C-A8EC-52DC7A3F28DF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0BE67D5D-61DA-1109-5CC3-03489F786696" name="EXCH_BROKER_SELLER_FK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>0BF76E04-A3A9-306C-0466-E97FF14850EF</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B1EE3D47-F98E-B84D-3583-8DF383C44F22"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6E2E3950-0D5D-2F04-B401-33FB7861C120" name="EXCH_ISSUER_SELLER_FK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>3CFA1374-1FCA-7A98-ED5E-2B7BD90224AA</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C0295BE-314D-2480-6D43-0ACC82E70E2B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CD1417A6-DF3B-DCF8-47A7-E278BF907371" name="EXCH_SECURITY_LIST_FK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>43EA3F72-A80B-1A67-CAC7-7D8BFD629B6D</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="19A8869E-5378-7C42-FA42-8418BC00B8CD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AB540D24-F404-FB0E-79E4-9A37F1AE4AA6" name="EXCH_TRADER_BUYER_FK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>BC73BEF2-411C-7C84-871A-D0574716A2E3</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7F41C379-78A5-1F5B-4BFB-37EFF231F0AE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B17E826B-769E-482B-2D96-C1AFFB4D9E22" name="EXCH_TRADER_SELLER_FK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>5DCEE42E-1C40-2E6D-0C6E-DA3F1FD1E0F2</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="472D04F6-9A6D-FB3A-E688-AE7D57BAAA89"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

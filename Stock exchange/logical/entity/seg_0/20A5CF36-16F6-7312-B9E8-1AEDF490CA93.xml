@@ -1,0 +1,182 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="20A5CF36-16F6-7312-B9E8-1AEDF490CA93" name="EXCHANGE">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-24 19:46:51 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="exchange_id" id="FAD819E5-F832-E9FF-C978-A74FF52DAE58">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-25 00:20:56 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="exchangeDate" id="0CEA39B7-F620-382B-3A34-AA0374603AF4">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-25 00:40:01 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="amount" id="D0F471DD-28CF-D19D-AF4B-45D009D258C5">
+<createdBy>alimu</createdBy>
+<createdTime>2021-05-02 01:56:59 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="broker_id" id="A78CF538-44A8-46D0-566C-48DFB45E6F84">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-26 22:36:07 UTC</createdTime>
+<generatorID>0E56CBF0-56BA-133D-8129-8DC76A254BB2</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<referedAttribute>C24814FC-A0DD-F43D-A831-D7D803E1D664</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="broker_id1" id="F87A15F4-7F3A-5EC7-5752-AABB05D58916">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-26 22:37:48 UTC</createdTime>
+<generatorID>0BF76E04-A3A9-306C-0466-E97FF14850EF</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<referedAttribute>C24814FC-A0DD-F43D-A831-D7D803E1D664</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="issuer_id" id="6591F990-DB9E-D5B8-D64E-A09F23374291">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-26 22:38:08 UTC</createdTime>
+<generatorID>3CFA1374-1FCA-7A98-ED5E-2B7BD90224AA</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<referedAttribute>9BD545FB-4BBB-5BDE-EE69-E40183C0D0D0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="shareholder_id" id="E0C74953-8E0C-B6C9-5CD2-5D43CC56192F">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 20:43:14 UTC</createdTime>
+<generatorID>BC73BEF2-411C-7C84-871A-D0574716A2E3</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="false"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<referedAttribute>24F99093-E4FC-D8ED-DE91-43AE7BF9088B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="shareholder_id2" id="47DE7112-4E32-01D7-5AE6-0CBC93AD272B">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 20:43:14 UTC</createdTime>
+<generatorID>5DCEE42E-1C40-2E6D-0C6E-DA3F1FD1E0F2</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="false"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<referedAttribute>24F99093-E4FC-D8ED-DE91-43AE7BF9088B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="exchange_id1" id="50922F20-B1F0-5BA4-B1AF-592838312BB7">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-30 00:43:15 UTC</createdTime>
+<generatorID>FBD09482-1909-3556-8F6A-0BAD8FB68BC8</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<referedAttribute>6A09C46B-6516-5241-3D61-25C96C3FFF68</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="security_id" id="140D9F68-5440-8293-7F07-9ADB83D49479">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-30 01:57:33 UTC</createdTime>
+<generatorID>43EA3F72-A80B-1A67-CAC7-7D8BFD629B6D</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<referedAttribute>FCC7348F-6587-CC63-0A1F-6BAB2F087D9A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="27CCBD62-08E4-E3F7-E659-09B3CAC4CAB4" name="Exchange PK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-25 00:21:06 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="false"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FAD819E5-F832-E9FF-C978-A74FF52DAE58</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

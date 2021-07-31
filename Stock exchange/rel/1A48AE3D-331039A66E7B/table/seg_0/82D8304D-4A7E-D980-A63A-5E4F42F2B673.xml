@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="82D8304D-4A7E-D980-A63A-5E4F42F2B673" name="TRADERS">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<comment><![CDATA[The table stores traders]]></comment>
+<generatorID>3ECBA94C-8567-2943-8535-CA598BCDD6C2</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<ordsAlias>trader</ordsAlias>
+<endOfScript><![CDATA[CREATE SEQUENCE TRADERS_SEQ;
+
+CREATE OR REPLACE TRIGGER TRADERS_TRG  
+BEFORE INSERT ON TRADERS 
+FOR EACH ROW 
+WHEN (new.SHAREHOLDER_ID IS NULL) 
+BEGIN 
+  SELECT TRADERS_SEQ.NEXTVAL 
+  INTO   :new.SHAREHOLDER_ID 
+  FROM   dual; 
+END;
+/]]></endOfScript>
+<shouldGeneratescript>true</shouldGeneratescript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SHAREHOLDER_ID" id="44973DCC-BEA9-E80A-D537-9545FF079D81">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 01:11:08 UTC</createdTime>
+<generatorID>24F99093-E4FC-D8ED-DE91-43AE7BF9088B</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="831A2E34-B360-9146-5FD2-B956B8A282C6">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 01:11:08 UTC</createdTime>
+<generatorID>279AAF61-1E64-1D2D-B476-57A3431E30D3</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SURNAME" id="A6556C86-3E81-9D2D-4282-C660E6AEDB8C">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 01:11:08 UTC</createdTime>
+<generatorID>12AD0171-38E5-E2D7-3A0E-25A25CF832BE</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BIRTHDATE" id="9926F60C-A8EF-AA97-8881-0067717F030A">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 01:11:08 UTC</createdTime>
+<generatorID>B6AF1802-183C-B2BC-5F4C-7586E7DD5E9B</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REGISTRATIONDATE" id="73063DA0-4A87-12BA-918A-DB34879C8DA2">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 01:11:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date of registration on market]]></commentInRDBMS>
+<generatorID>6A8B08DF-1448-6046-EB53-CBC6FEB8E551</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PHONENUMBER" id="6590DB6C-380B-FE18-CD45-4767EA946EEB">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 01:11:08 UTC</createdTime>
+<generatorID>CFE5CB4F-BF7A-4492-2C78-EEC42EB8FC37</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="3D6FA4FA-67CF-E61F-6777-891E1D4B5C1D">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 01:11:08 UTC</createdTime>
+<generatorID>331F9713-A902-45B5-3C5F-BE51DAE5F9F9</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E9EA2566-FEC0-FFE2-EC6A-6BFE9B2DCE9F" name="TRADER_PK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>224DB6C6-546C-5800-B6F1-B70AF07CDA0C</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="44973DCC-BEA9-E80A-D537-9545FF079D81"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="577B587B-A239-A4FD-5572-640A51B08BFA" name="TRADER_PHONENUMBER_UK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-30 23:48:39 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6590DB6C-380B-FE18-CD45-4767EA946EEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A33FE4B9-484F-D533-A644-555FE9FF0414" name="TRADER_EMAIL_UK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-30 23:48:39 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3D6FA4FA-67CF-E61F-6777-891E1D4B5C1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

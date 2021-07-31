@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CBD7C910-1FC1-DA89-D222-4E179E2FEA97" name="SECURITY_LISTS">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>54516140-1F44-571D-C91D-A71477CEDC62</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<ordsAlias>security_list</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SECURITY_ID" id="7D7EA35E-9299-A5CE-D3E8-2C9E276066C5">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-30 01:47:17 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3B3B8304-FD2E-40CD-0090-B891AA69F91F" referredColumn="BE7D43E0-77DA-AD55-AB9C-88F386D71B11"/>
+</associations>
+</Column>
+<Column name="APPROVALDATE" id="FB62E28E-AA69-D51F-5AC9-8EE534167382">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-30 02:00:12 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4550410A-BD40-9FBD-1558-B9F492170C12" name="SECURITY_LIST_PK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>3538AD90-3311-F170-BC86-9644B7A30596</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7D7EA35E-9299-A5CE-D3E8-2C9E276066C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="67BF36CD-9F5D-EBA3-BC04-C59BAB07EDF4" name="SECURITY_LISTS_SECURITIES_FK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-30 01:47:17 UTC</createdTime>
+<generatorID>A4B5C064-68D7-7DFA-F4ED-A0E9A010F4AD</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7D7EA35E-9299-A5CE-D3E8-2C9E276066C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

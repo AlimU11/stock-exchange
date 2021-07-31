@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Stock exchange" id="F2A0CAAD-A2BB-2A92-D04E-5D223A2226F2" version="3.5">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-10 17:04:37 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>F2A0CAAD-A2BB-2A92-D04E-5D223A2226F2</designId>
+</OSDM_Design>

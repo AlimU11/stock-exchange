@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2A88F677-6EFC-D3D0-C3B0-E0318A5A73C3" containerWithKeyObject="8A2BDB66-E746-87D5-83BA-0D4BA250F45B" localFKIndex="0FD1AEA9-629A-9420-1E36-D0B43695D139" name="BASE_PRICE_SECURITY_FK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 21:42:59 UTC</createdTime>
+<generatorID>EA057513-D742-6ABB-C4B6-D415BFB37342</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<referredTableLongName>SECURITIES</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>0DA62C55-CB7B-E349-D14B-F5B819F7D50D</referredTableID>
+<keyObject>70B554E9-838D-A1B1-F958-71F58BD54811</keyObject>
+<referredKeyID>70B554E9-838D-A1B1-F958-71F58BD54811</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>SECURITY_ID</refColNames>
+<transferable>false</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

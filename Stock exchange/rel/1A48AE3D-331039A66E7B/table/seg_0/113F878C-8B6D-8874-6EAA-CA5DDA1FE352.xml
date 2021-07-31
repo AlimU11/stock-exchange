@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="113F878C-8B6D-8874-6EAA-CA5DDA1FE352" name="PAYMENTS">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>C1F8E971-8916-CDCF-A3C9-0931B5A7D051</generatorID>
+<notes><![CDATA[The table stores Payments for exact Exchanges]]></notes>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<ordsAlias>payment</ordsAlias>
+<abbreviation>IPC</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EXCHANGE_ID" id="15529009-C563-BC4F-D4CD-53F4BA6A7C93">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 20:10:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID of exact related Exchange]]></commentInRDBMS>
+<generatorID>6A09C46B-6516-5241-3D61-25C96C3FFF68</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8BD31A30-6FB2-BAB0-1DC4-F75C74FBB5EC" referredColumn="EA6AFA85-A445-AF75-4BC9-E23DBD0B9E44"/>
+</associations>
+</Column>
+<Column name="PAIDAMOUNT" id="918B0AD5-4772-C66B-5DC8-12CF7953C301">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Paid amount]]></commentInRDBMS>
+<generatorID>DE75667E-736D-1307-A2A1-DFB8FB62EC3D</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CURRENCY" id="B0B687CB-D2FA-19CC-6560-2899844B6460">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Currency of payment]]></commentInRDBMS>
+<generatorID>74D6D6C1-F955-AF4D-B1D3-42CBB0EEC97D</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXCH_RATE_EXRATEDATE" id="8CB5C59F-97B9-D6E2-1F90-2909C8C2D85F">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>4A69D625-F312-147B-73EE-7FAEC1F517B0</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EC92358A-9219-8930-A9F5-C9E0CCA61C29" referredColumn="063513EF-4D37-6AF7-33E9-071B8779D94E"/>
+</associations>
+</Column>
+<Column name="EXCH_RATE_CURRENCYPAIR" id="255985DA-6B18-331A-3CBA-8B160626C4FA">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>D1CD792B-E8B7-74D0-6AB3-D788B1B5E981</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EC92358A-9219-8930-A9F5-C9E0CCA61C29" referredColumn="4340C463-3807-D530-96F4-8A8C8404AB36"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="982E857F-C615-0449-384E-9D466F4E9B90" name="PAYMENT_PK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>E1E63947-E9C9-5735-A332-0507CCA82DB6</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="15529009-C563-BC4F-D4CD-53F4BA6A7C93"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5273F583-27EE-C395-5F52-BCA4978E0C5F" name="PAYMENT_EXCH_RATE_FK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>94731F2D-69F5-F6C5-21B0-09E3069CABE7</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8CB5C59F-97B9-D6E2-1F90-2909C8C2D85F"/>
+<colUsage columnID="255985DA-6B18-331A-3CBA-8B160626C4FA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D483656D-D0B1-FAA2-4C1E-78FCE8F78F5D" name="PAYMENT_EXCH_FK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 20:10:19 UTC</createdTime>
+<generatorID>FBD09482-1909-3556-8F6A-0BAD8FB68BC8</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="15529009-C563-BC4F-D4CD-53F4BA6A7C93"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

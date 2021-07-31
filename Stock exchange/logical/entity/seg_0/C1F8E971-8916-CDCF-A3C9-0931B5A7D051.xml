@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C1F8E971-8916-CDCF-A3C9-0931B5A7D051" name="PAYMENT">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-24 19:47:45 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>IPC</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="paidAmount" id="DE75667E-736D-1307-A2A1-DFB8FB62EC3D">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-25 00:26:47 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="currency" id="74D6D6C1-F955-AF4D-B1D3-42CBB0EEC97D">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-25 00:27:02 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="exRateDate" id="4A69D625-F312-147B-73EE-7FAEC1F517B0">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-25 23:38:24 UTC</createdTime>
+<generatorID>94731F2D-69F5-F6C5-21B0-09E3069CABE7</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>7098C981-5C3B-9925-F283-DE13021E424B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="currencyPair" id="D1CD792B-E8B7-74D0-6AB3-D788B1B5E981">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-25 23:38:24 UTC</createdTime>
+<generatorID>94731F2D-69F5-F6C5-21B0-09E3069CABE7</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>396F331C-21CD-8FA9-ACB2-85089450B4AB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="exchange_id" id="6A09C46B-6516-5241-3D61-25C96C3FFF68">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 19:51:23 UTC</createdTime>
+<generatorID>FBD09482-1909-3556-8F6A-0BAD8FB68BC8</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<referedAttribute>FAD819E5-F832-E9FF-C978-A74FF52DAE58</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E1E63947-E9C9-5735-A332-0507CCA82DB6" name="Investor Paid Currency PK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-25 00:23:33 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="false"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6A09C46B-6516-5241-3D61-25C96C3FFF68</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

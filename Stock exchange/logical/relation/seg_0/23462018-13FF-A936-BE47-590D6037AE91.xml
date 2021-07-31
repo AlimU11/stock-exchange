@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_39" directorySegmentName="seg_0" id="23462018-13FF-A936-BE47-590D6037AE91">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-25 22:56:03 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<engineerTo>
+<item key="1A48AE3D-E96D-AEB2-C11E-331039A66E7B" value="true"/>
+<item key="69C0FA36-A6D7-EC0B-1896-EA47B1DC2957" value="true"/>
+</engineerTo>
+<sourceTransferable>false</sourceTransferable>
+<sourcePk>3538AD90-3311-F170-BC86-9644B7A30596</sourcePk>
+<targetPk>A4B5C064-68D7-7DFA-F4ED-A0E9A010F4AD</targetPk>
+<identifying>false</identifying>
+<nameOnSource>has</nameOnSource>
+<nameOnTarget>is in</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>54516140-1F44-571D-C91D-A71477CEDC62</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>9C0EBBE1-E15A-8017-0CE2-64B0398DF0C6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

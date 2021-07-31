@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AC2E09C1-445C-7B6F-C093-C77150CFEF46" name="ISSUERS">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>E6CE186D-D41C-968E-3767-805F4BF83F5D</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<ordsAlias>issuer</ordsAlias>
+<endOfScript><![CDATA[CREATE SEQUENCE ISSUERS_SEQ;
+
+CREATE OR REPLACE TRIGGER ISSUERS_TRG  
+BEFORE INSERT ON ISSUERS 
+FOR EACH ROW 
+WHEN (new.ISSUER_ID IS NULL) 
+BEGIN 
+  SELECT ISSUERS_SEQ.NEXTVAL 
+  INTO   :new.ISSUER_ID 
+  FROM   dual; 
+END; 
+/]]></endOfScript>
+<shouldGeneratescript>true</shouldGeneratescript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ISSUER_ID" id="89E5769A-51A0-4352-015C-F3109FC3B823">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID of Issuer]]></commentInRDBMS>
+<generatorID>9BD545FB-4BBB-5BDE-EE69-E40183C0D0D0</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="DD35AC33-0ACE-42C9-3B23-951BDCA32F14">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Issuer's Name]]></commentInRDBMS>
+<generatorID>66955FC9-5A0C-891D-8A6A-D24B45F66362</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64 CHAR</dataTypeSize>
+<ownDataTypeParameters>64 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MARKETCAPITALIZATION" id="594C1923-6EE9-DA2C-7853-035775E23B68">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[The market value of a publicly traded company's outstanding shares]]></commentInRDBMS>
+<generatorID>15B137EE-C782-9B9A-556F-EBC3401AFB0C</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9 CHAR</dataTypeSize>
+<ownDataTypeParameters>9 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DURATIONAFS" id="6A5DF9C1-9740-072D-752C-366245DD039B">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Audited financial statements  - Public companies are obligated by law to ensure that their financial statements are audited by a registered CPA. The purpose of the independent audit is to provide assurance that the management has presented financial statements that are free from material error. ]]></commentInRDBMS>
+<generatorID>61E1DB2A-68FE-82D0-96FA-FD3965BCF730</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT048</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PUBLICFLOAT" id="EF0C7AE5-6AEC-1E15-C10C-DD08574D360C">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>FE492518-1F57-966A-EA05-B69E53CF56BE</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9 CHAR</dataTypeSize>
+<ownDataTypeParameters>9 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SECTOR" id="8928DFC1-AA31-E2B8-8594-E3B11F4116C0">
+<createdBy>alimu</createdBy>
+<createdTime>2021-05-01 02:59:39 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64 CHAR</dataTypeSize>
+<ownDataTypeParameters>64 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMPLOYEES" id="2D5AB629-1978-B655-12D8-8E69C7ACCA24">
+<createdBy>alimu</createdBy>
+<createdTime>2021-05-01 02:59:39 UTC</createdTime>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6222F429-04BB-4088-D693-DF143365F00A" name="ISSUER_PK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>9C19B05C-EA27-A914-6937-FD5E27F03C73</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="89E5769A-51A0-4352-015C-F3109FC3B823"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

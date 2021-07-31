@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8A2BDB66-E746-87D5-83BA-0D4BA250F45B" name="BASE_PRICES">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>E1D74645-4ACB-B88E-51A4-DD5DBA640F19</generatorID>
+<notes><![CDATA[The table stores securities' prices in base currency including their history]]></notes>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<ordsAlias>base_price</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PRICEDATE" id="057A01B7-1441-D2E3-CB66-5FFF4F0C836D">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date of the related price]]></commentInRDBMS>
+<generatorID>CEEF5B67-052A-F37C-642D-3843EE61008B</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRICE" id="C5723240-BDC8-8378-E7A6-529E6F9C5DD0">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Price of Security]]></commentInRDBMS>
+<generatorID>1B55D843-59A9-D150-F602-26535F7C9990</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CURRENCY" id="689378F9-DF7D-0913-6171-5D89B5475ED8">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Base currency of security in which it represented on the market]]></commentInRDBMS>
+<generatorID>79A0168F-41A4-D5C8-65E6-16A14DDB1F96</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3 CHAR</dataTypeSize>
+<ownDataTypeParameters>3 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SECURITY_ID" id="B4371C09-430E-228A-366F-4C04AB7754D6">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 21:42:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID of related Security]]></commentInRDBMS>
+<generatorID>5F976C5F-2A85-E3D2-745A-5592DC36E214</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2A88F677-6EFC-D3D0-C3B0-E0318A5A73C3" referredColumn="BE7D43E0-77DA-AD55-AB9C-88F386D71B11"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="081AEC26-8EA3-288B-0516-E169723ACA41" name="BASE_PRICE_PK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-27 00:11:04 UTC</createdTime>
+<generatorID>0245356C-13C8-518E-ACFB-A79905F69F81</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="057A01B7-1441-D2E3-CB66-5FFF4F0C836D"/>
+<colUsage columnID="B4371C09-430E-228A-366F-4C04AB7754D6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0FD1AEA9-629A-9420-1E36-D0B43695D139" name="BASE_PRICE_SECURITY_FK">
+<createdBy>alimu</createdBy>
+<createdTime>2021-04-29 21:42:59 UTC</createdTime>
+<generatorID>EA057513-D742-6ABB-C4B6-D415BFB37342</generatorID>
+<ownerDesignName>Stock exchange</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B4371C09-430E-228A-366F-4C04AB7754D6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
